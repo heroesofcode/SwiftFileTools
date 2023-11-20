@@ -25,7 +25,7 @@ struct SwiftFileTools: ParsableCommand {
         } else if option == "2" {
             Colors().setup()
         } else if option == "3" {
-            // Constants
+            Constants().setup()
         } else if option == "4" {
             ViewCode().setup()
         } else {
