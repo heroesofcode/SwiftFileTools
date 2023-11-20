@@ -9,13 +9,15 @@ let package = Package(
         .macOS(.v10_13)
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.2.0")
+        .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.2.0"),
+        .package(url: "https://github.com/apple/example-package-figlet", branch: "main")
     ],
     targets: [
         .executableTarget(
             name: "SwiftFileTools",
             dependencies: [
-                .product(name: "ArgumentParser", package: "swift-argument-parser")
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                .product(name: "Figlet", package: "example-package-figlet")
             ]
         )
     ]
