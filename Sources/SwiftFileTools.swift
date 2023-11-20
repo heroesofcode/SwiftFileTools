@@ -8,6 +8,28 @@ struct SwiftFileTools: ParsableCommand {
         Header().setup()
         print("-----------------------------".yellow)
         
-        SwiftGen().setup()
+        print("1 - swiftgen.yml")
+        print("2 - Colors.swift")
+        print("3 - Constants.swift")
+        print("4 - ViewCode.swift")
+        
+        print("-----------------------------".yellow)
+        
+        print("Which file do you want to generate?")
+        guard let option = readLine() else { return }
+        
+        if option.isEmpty {
+            print("❌ Empty field".red)
+        } else if option == "1" {
+            SwiftGen().setup()
+        } else if option == "2" {
+            // Colors
+        } else if option == "3" {
+            // Constants
+        } else if option == "4" {
+            // ViewCode
+        } else {
+            print("❌ This option does not exist".red)
+        }
     }
 }
