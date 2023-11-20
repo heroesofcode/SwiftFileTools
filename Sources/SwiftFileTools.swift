@@ -9,6 +9,9 @@ import ArgumentParser
 @main
 struct SwiftFileTools: ParsableCommand {
     mutating func run() throws {
-        print("Hello, world!")
+        print("Name: ")
+        
+        guard let name = readLine() else { return }
+        print(name)
     }
 }
