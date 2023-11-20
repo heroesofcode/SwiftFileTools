@@ -1,2 +1,2 @@
 run:
-	swift run SwiftFileTools
+   swift run SwiftFileTools
