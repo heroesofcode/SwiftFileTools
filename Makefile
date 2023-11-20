@@ -1,2 +1,2 @@
-test-ios:
+run:
 	swift run SwiftFileTools
