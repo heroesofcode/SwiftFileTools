@@ -27,7 +27,7 @@ struct SwiftFileTools: ParsableCommand {
         } else if option == "3" {
             // Constants
         } else if option == "4" {
-            // ViewCode
+            ViewCode().setup()
         } else {
             print("❌ This option does not exist".red)
         }
