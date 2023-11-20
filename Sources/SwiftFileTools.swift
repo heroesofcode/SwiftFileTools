@@ -23,7 +23,7 @@ struct SwiftFileTools: ParsableCommand {
         } else if option == "1" {
             SwiftGen().setup()
         } else if option == "2" {
-            // Colors
+            Colors().setup()
         } else if option == "3" {
             // Constants
         } else if option == "4" {
