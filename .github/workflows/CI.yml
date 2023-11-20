@@ -1,0 +1,22 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: macOS-13
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: maxim-lobanov/setup-xcode@v1.6.0
+      with:
+        xcode-version: 15.0.1
+      
+    - name: Lint
+      run: |
+        set -o pipefail
+        swiftlint
+            
+    - name: Build
+      run: swift run SwiftFileTools
