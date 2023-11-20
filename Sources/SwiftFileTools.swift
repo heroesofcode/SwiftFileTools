@@ -6,5 +6,8 @@ import Rainbow
 struct SwiftFileTools: ParsableCommand {
     mutating func run() throws {
         Header().setup()
+        print("-----------------------------".yellow)
+        
+        SwiftGen().setup()
     }
 }
