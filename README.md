@@ -27,4 +27,4 @@ To contribute, just fork this project and then open a pull request, feel free to
 
 ## License
 
-ViewState is released under the MIT license. See [LICENSE](https://github.com/heroesofcode/SwiftFileTools/blob/main/LICENSE) for details.
+SwiftFileTools is released under the MIT license. See [LICENSE](https://github.com/heroesofcode/SwiftFileTools/blob/main/LICENSE) for details.
