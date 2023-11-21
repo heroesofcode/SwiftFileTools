@@ -1,6 +1,7 @@
 # SwiftFileTools
 
 [![CI](https://github.com/heroesofcode/SwiftFileTools/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/SwiftFileTools/actions/workflows/CI.yml)
+[![License](https://img.shields.io/github/license/heroesofcode/SwiftFileTools.svg)](https://github.com/heroesofcode/SwiftFileTools/blob/main/LICENSE)
 
 With SwiftFileTools you can generate everyday files such as Colors, Constants, ViewCode and files for SwiftGen. Command line tools for macOS.
 
