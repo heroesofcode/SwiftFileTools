@@ -4,7 +4,7 @@
 
 With SwiftFileTools you can generate everyday files such as Colors, Constants, ViewCode and files for SwiftGen. Command line tools for macOS.
 
-<img src="https://github.com/heroesofcode/SwiftFileTools/blob/structure/adjust-project/assets/demo.png">
+<img src="https://github.com/heroesofcode/SwiftFileTools/blob/main/assets/demo.png">
 
 ## Installation
 
