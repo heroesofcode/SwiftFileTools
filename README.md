@@ -2,9 +2,10 @@
 
 [![CI](https://github.com/heroesofcode/SwiftFileTools/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/SwiftFileTools/actions/workflows/CI.yml)
 [![Tag](https://img.shields.io/github/v/tag/heroesofcode/SwiftFileTools?logo=github)](https://github.com/heroesofcode/SwiftFileTools/releases)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fheroesofcode%2FSwiftFileTools%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/heroesofcode/SwiftFileTools)
 [![License](https://img.shields.io/github/license/heroesofcode/SwiftFileTools.svg)](https://github.com/heroesofcode/SwiftFileTools/blob/main/LICENSE)
 
-With SwiftFileTools you can generate everyday files such as Colors, Constants, ViewCode and files for SwiftGen. Command line tools for macOS.
+SwiftFileTools is a tool for you to generate Colors, Constants, ViewCode and files for SwiftGen.
 
 <img src="https://github.com/heroesofcode/SwiftFileTools/blob/main/assets/demo.png">
 
