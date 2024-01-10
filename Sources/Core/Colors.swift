@@ -9,15 +9,15 @@ import Foundation
 import Rainbow
 
 final class Colors {
-    
+
     func setup() {
         print("⚠️ We generate these colors in your file, you can change them and leave them with only the necessary colors".yellow)
-        
+
         print("-----------------------------".yellow)
-        
+
         generateFile()
     }
-    
+
     private func generateFile() {
         let filePath = "Colors.swift"
 
@@ -32,7 +32,7 @@ final class Colors {
                 assert(blue >= 0 && blue <= 255, "Invalid blue component")
                 self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: alpha)
             }
-            
+
             convenience init(hexadecimal: Int, alpha: CGFloat) {
                 self.init(red: (hexadecimal >> 16) & 0xff,
                           green: (hexadecimal >> 8) & 0xff,
@@ -40,24 +40,24 @@ final class Colors {
                           alpha: alpha)
             }
         }
-        
+
         extension UIColor {
-            
+
             /// White
             static var whiteColor: UIColor = {
                 return UIColor(hexadecimal: 0xFFFFFF, alpha: 1.0)
             }()
-            
+
             /// Silver
             static var silverColor: UIColor = {
                 return UIColor(hexadecimal: 0xC0C0C0, alpha: 1.0)
             }()
-            
+
             /// Gray
             static var grayColor: UIColor = {
                 return UIColor(hexadecimal: 0x808080, alpha: 1.0)
             }()
-            
+
             /// Purple
             static var purpleColor: UIColor = {
                 return UIColor(hexadecimal: 0x800080, alpha: 1.0)

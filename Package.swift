@@ -12,7 +12,7 @@ let package = Package(
         .executable(name: "SwiftFileTools", targets: ["SwiftFileTools"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.3.0"),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.3.0"),
         .package(url: "https://github.com/apple/example-package-figlet", branch: "main"),
         .package(url: "https://github.com/onevcat/Rainbow", .upToNextMajor(from: "4.0.1"))
     ],

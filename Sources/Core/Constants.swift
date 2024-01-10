@@ -9,11 +9,11 @@ import Foundation
 import Rainbow
 
 final class Constants {
-    
+
     func setup() {
         generateFile()
     }
-    
+
     private func generateFile() {
         let filePath = "Constants.swift"
 

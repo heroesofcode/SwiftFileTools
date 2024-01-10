@@ -7,17 +7,17 @@ struct SwiftFileTools: ParsableCommand {
     mutating func run() throws {
         Header().setup()
         print("-----------------------------".yellow)
-        
+
         print("1 - swiftgen.yml")
         print("2 - Colors.swift")
         print("3 - Constants.swift")
         print("4 - ViewCode.swift")
-        
+
         print("-----------------------------".yellow)
-        
+
         print("Which file do you want to generate?")
         guard let option = readLine() else { return }
-        
+
         if option.isEmpty {
             print("❌ Empty field".red)
         } else if option == "1" {

@@ -9,18 +9,18 @@ import Foundation
 import Rainbow
 
 final class SwiftGen {
-    
+
     func setup() {
         print("What is the name of the project?")
         guard let projectName = readLine() else { return }
-        
+
         if projectName.isEmpty {
             print("❌ Empty field".red)
         } else {
-            
+
             print("Is the file public?: Yes/No")
             guard let isPublic = readLine() else { return }
-            
+
             if isPublic.isEmpty {
                 print("❌ Empty field".red)
             } else if isPublic == "Yes" {
@@ -32,11 +32,11 @@ final class SwiftGen {
             }
         }
     }
-    
+
     private func generateFile(name: String, isPublic: Bool) {
         print("Do you want to save this file in a specific location? If you can't press enter")
         guard let path = readLine() else { return }
-        
+
         if path.isEmpty {
             let filePath = "swiftgen.yml"
             let swiftCode = code(name: name, isPublic: isPublic)
@@ -49,7 +49,7 @@ final class SwiftGen {
             validateFileGenerated(swiftCode: swiftCode, filePath: filePath)
         }
     }
-    
+
     private func validateFileGenerated(swiftCode: String, filePath: String) {
         do {
             try swiftCode.write(toFile: filePath, atomically: true, encoding: .utf8)
@@ -58,7 +58,7 @@ final class SwiftGen {
             print("❌ We had an error generating".red)
         }
     }
-    
+
     private func code(name: String, isPublic: Bool) -> String {
         if isPublic == true {
             let swiftCodeWithPublic = """
@@ -77,7 +77,7 @@ final class SwiftGen {
                   output: ImageAssets.swift
                   params: { "enumName": "ImageAssets", "publicAccess": true }
             """
-            
+
             return swiftCodeWithPublic
         } else {
             let swiftCode = """
@@ -94,7 +94,7 @@ final class SwiftGen {
                 - templateName: swift4
                   output: ImageAssets.swift
             """
-            
+
             return swiftCode
         }
     }

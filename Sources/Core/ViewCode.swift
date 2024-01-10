@@ -9,11 +9,11 @@ import Foundation
 import Rainbow
 
 final class ViewCode {
-    
+
     func setup() {
         print("Is the file public?: Yes/No")
         guard let isPublic = readLine() else { return }
-        
+
         if isPublic.isEmpty {
             print("❌ Empty field".red)
         } else if isPublic == "Yes" {
@@ -24,7 +24,7 @@ final class ViewCode {
             print("❌ This option does not exist".red)
         }
     }
-    
+
     private func generateFile(isPublic: Bool) {
         let filePath = "ViewCode.swift"
 
@@ -37,7 +37,7 @@ final class ViewCode {
             print("❌ We had an error generating".red)
         }
     }
-    
+
     private func code(isPublic: Bool) -> String {
         if isPublic == true {
             let swiftCodeWithPublic = """
@@ -60,7 +60,7 @@ final class ViewCode {
                 }
             }
             """
-            
+
             return swiftCodeWithPublic
         } else {
             let swiftCode = """
@@ -83,7 +83,7 @@ final class ViewCode {
                 }
             }
             """
-            
+
             return swiftCode
         }
     }
