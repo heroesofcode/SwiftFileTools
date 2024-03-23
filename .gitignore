@@ -89,3 +89,8 @@ fastlane/test_output
 
 iOSInjectionProject/
 Derived/
+
+swiftgen.yml
+Colors.swift
+Constants.swift
+ViewCode.swift
