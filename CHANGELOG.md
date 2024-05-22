@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 1.2.1
+**2024-05-22**
+
+- Updated swift-argument-parser to 1.4.0 (was 1.3.1)
+
 ## Version 1.2.0
 **2024-03-23**
 
