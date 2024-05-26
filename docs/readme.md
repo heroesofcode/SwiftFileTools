@@ -7,7 +7,7 @@
 
 SwiftFileTools is a tool for you to generate Colors, Constants, ViewCode and files for SwiftGen.
 
-<img src="https://github.com/heroesofcode/SwiftFileTools/blob/main/assets/demo.png">
+<img src="https://raw.githubusercontent.com/heroesofcode/SwiftFileTools/main/assets/demo.png">
 
 ## Installation
 
