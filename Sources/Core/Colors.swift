@@ -11,17 +11,39 @@ import Rainbow
 final class Colors {
 
     func setup() {
-        print("⚠️ We generate these colors in your file, you can change them and leave them with only the necessary colors".yellow)
+        print("\nEnter the number of colors you want to add:".yellow)
+        
+        guard let countInput = readLine(), let count = Int(countInput) else {
+            print("Invalid Input. Please enter a number.".red)
+            return
+        }
 
-        print("-----------------------------".yellow)
+        var colors: [(name: String, hexCode: String)] = []
 
-        generateFile()
+        for i in 1...count {
+            print("Enter the color name \(i):")
+            guard let name = readLine(), !name.isEmpty else {
+                print("Invalid name. Try again.".red)
+                continue
+            }
+
+            print("Enter the hexadecimal code to \(name) (ex: #FFFFFF):")
+            guard let hexInput = readLine(), let _ = Int(hexInput.replacingOccurrences(of: "#", with: ""), radix: 16) else {
+                print("Invalid hexadecimal code. Try again.".red)
+                continue
+            }
+
+            let hexCode = hexInput.replacingOccurrences(of: "#", with: "0x")
+            colors.append((name: name, hexCode: hexCode))
+        }
+
+        generateFile(with: colors)
     }
 
-    private func generateFile() {
+    private func generateFile(with colors: [(name: String, hexCode: String)]) {
         let filePath = "Colors.swift"
-
-        let swiftCode = """
+        
+        var swiftCode = """
         import UIKit
 
         extension UIColor {
@@ -33,43 +55,36 @@ final class Colors {
                 self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: alpha)
             }
 
-            convenience init(hexadecimal: Int, alpha: CGFloat) {
-                self.init(red: (hexadecimal >> 16) & 0xff,
-                          green: (hexadecimal >> 8) & 0xff,
-                          blue: hexadecimal & 0xff,
+            convenience init(hexadecimal: String, alpha: CGFloat) {
+                let hex = Int(hexadecimal.dropFirst(2), radix: 16) ?? 0
+                self.init(red: (hex >> 16) & 0xff,
+                          green: (hex >> 8) & 0xff,
+                          blue: hex & 0xff,
                           alpha: alpha)
             }
         }
 
         extension UIColor {
 
-            /// White
-            static var whiteColor: UIColor = {
-                return UIColor(hexadecimal: 0xFFFFFF, alpha: 1.0)
-            }()
-
-            /// Silver
-            static var silverColor: UIColor = {
-                return UIColor(hexadecimal: 0xC0C0C0, alpha: 1.0)
-            }()
-
-            /// Gray
-            static var grayColor: UIColor = {
-                return UIColor(hexadecimal: 0x808080, alpha: 1.0)
-            }()
-
-            /// Purple
-            static var purpleColor: UIColor = {
-                return UIColor(hexadecimal: 0x800080, alpha: 1.0)
-            }()
-        }
         """
+        
+        for color in colors {
+            swiftCode += """
+
+                static var \(color.name): UIColor = {
+                    return UIColor(hexadecimal: "\(color.hexCode)", alpha: 1.0)
+                }()
+
+            """
+        }
+        
+        swiftCode += "}\n"
 
         do {
             try swiftCode.write(toFile: filePath, atomically: true, encoding: .utf8)
             print("✅ File generated successfully: \(filePath)".green)
         } catch {
-            print("❌ We had an error generating".red)
+            print("❌ An error occurred while generating the file.".red)
         }
     }
 }
