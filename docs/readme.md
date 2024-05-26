@@ -34,4 +34,4 @@ SwiftFileTools is released under the MIT license. See [LICENSE](https://github.c
 
 ## Changelog
 
-Check [changelog](heroesofcode.github.io/SwiftFileTools/changelog.html)
+Check [changelog](https://heroesofcode.github.io/SwiftFileTools/changelog.html)
