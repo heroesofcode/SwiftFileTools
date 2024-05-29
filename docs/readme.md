@@ -11,6 +11,13 @@ SwiftFileTools is a tool for you to generate Colors, Constants, ViewCode and fil
 
 ## Installation
 
+### Shell Script
+
+```sh
+chmod +x ./script.sh
+./script.sh
+```
+
 ### Make
 ```
 make run
@@ -28,10 +35,10 @@ mint install heroesofcode/SwiftFileTools
 
 To contribute, just fork this project and then open a pull request, feel free to contribute, bring ideas and raise any problem in the issue tab.
 
-## License
-
-SwiftFileTools is released under the MIT license. See [LICENSE](https://github.com/heroesofcode/SwiftFileTools/blob/main/LICENSE) for details.
-
 ## Changelog
 
 Check [changelog](https://heroesofcode.github.io/SwiftFileTools/changelog.html)
+
+## License
+
+SwiftFileTools is released under the MIT license. See [LICENSE](https://github.com/heroesofcode/SwiftFileTools/blob/main/LICENSE) for details.
