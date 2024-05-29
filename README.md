@@ -11,6 +11,13 @@ SwiftFileTools is a tool for you to generate Colors, Constants, ViewCode and fil
 
 ## Installation
 
+### Shell Script
+
+```sh
+chmod +x ./script.sh
+./script.sh
+```
+
 ### Make
 ```
 make run
