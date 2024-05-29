@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 1.3.0
+**2024-05-28**
+
+- You can generate with the colors you want
+
 ## Version 1.2.1
 **2024-05-22**
 
