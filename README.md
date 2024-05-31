@@ -11,16 +11,12 @@ SwiftFileTools is a tool for you to generate Colors, Constants, ViewCode and fil
 
 ## Installation
 
-### Shell Script
+### Homebrew
+You can install with [Homebrew](https://brew.sh/):
 
-```sh
-chmod +x ./script.sh
-./script.sh
-```
-
-### Make
-```
-make run
+```shell
+brew tap heroesofcode/taps
+brew install heroesofcode/taps/SwiftFileTools
 ```
 
 ### Mint
