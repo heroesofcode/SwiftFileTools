@@ -21,7 +21,7 @@ brew install heroesofcode/taps/SwiftFileTools
 
 ### Mint
 
-To install with [Mint](https://github.com/yonaskolb/Mint) you can use the documentation from this repository
+You can install with [Mint](https://github.com/yonaskolb/Mint):
 
 ```
 mint install heroesofcode/SwiftFileTools
