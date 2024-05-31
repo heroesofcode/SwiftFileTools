@@ -13,7 +13,6 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.4.0"),
-        .package(url: "https://github.com/apple/example-package-figlet", branch: "main"),
         .package(url: "https://github.com/onevcat/Rainbow", .upToNextMajor(from: "4.0.1"))
     ],
     targets: [
@@ -21,7 +20,6 @@ let package = Package(
             name: "SwiftFileTools",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
-                .product(name: "Figlet", package: "example-package-figlet"),
                 "Rainbow"
             ]
         )
