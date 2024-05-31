@@ -1,5 +1,4 @@
 import ArgumentParser
-import Figlet
 import Rainbow
 
 @main
