@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 1.3.1
+**2024-05-31**
+
+- Remove import Figlet
+
 ## Version 1.3.0
 **2024-05-28**
 
