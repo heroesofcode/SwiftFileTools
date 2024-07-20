@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": ["*"],
+      "groupName": "all dependencies",
+      "automerge": false
+    },
+    {
+      "packageNames": ["*"],
+      "managers": ["swift"],
+      "groupName": "swift dependencies",
+      "automerge": false
+    }
+  ]
+}
