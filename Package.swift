@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.5.0"),
-        .package(url: "https://github.com/onevcat/Rainbow", .upToNextMajor(from: "4.0.1"))
+        .package(url: "https://github.com/onevcat/Rainbow", .upToNextMajor(from: "4.1.0"))
     ],
     targets: [
         .executableTarget(
