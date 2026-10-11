@@ -1,3 +1,7 @@
+> [!WARNING]
+> This project is no longer maintained.
+> If you want to continue using SwiftFileTools, feel free to fork the repository and maintain your own version.
+
 # SwiftFileTools
 
 [![CI](https://github.com/heroesofcode/SwiftFileTools/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/SwiftFileTools/actions/workflows/CI.yml)
